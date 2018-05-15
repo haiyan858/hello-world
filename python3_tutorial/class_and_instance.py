@@ -1,7 +1,4 @@
-# class_and_instance.py
-# 2018年 2月27日 星期二 17时02分29秒 CST
-# 面向对象编程——Object Oriented Programming，简称OOP
-# 数据封装、继承和多态是面向对象的三大特点。
+
 
 class Student(object):
 	# 实例变量self
@@ -26,7 +23,28 @@ class Student(object):
 		else:
 			return 'C'
 
-
+class Student2(object):
+	# 实例变量self
+	def __init__(self, name, score):
+		self.name = name
+		self.score = score
+	# 数据封装
+	def print_score(self):
+		print('%s : %s'%(self.name,self.score))
+	def get_grade(self):
+		if self.score >= 90:
+			return 'A'
+		elif self.score >= 60:
+			return 'B'
+		else:
+			return 'C'
+	def get_rank(self):
+		if self.name.lower().startswith('a'):
+			return 'A'
+		elif self.name.lower().startswith('b'):
+			return 'B'
+		else:
+			return 'C'
 # bart = Student('Bart Simpson',59)
 # bart.print_score()
 
